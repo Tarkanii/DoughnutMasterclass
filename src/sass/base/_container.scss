@@ -1,0 +1,17 @@
+@use '../abstracts/mixins';
+
+.container {
+    max-width: 320px;
+    padding: 0 15px;
+    width: 100%;
+
+    @include tablet {
+        max-width: 768px;
+        padding: 0 68px;
+    }
+
+    @include desktop {
+        max-width: 1280px;
+        padding: 0 229px;
+    }
+}
