@@ -1,0 +1,110 @@
+@use '../abstracts/mixins' as *;
+
+.header {
+    padding-top: 7px;
+
+    @include tablet {
+        padding-top: 27px;
+    }
+
+    @include desktop {
+        padding-top: 31px;
+    }
+
+    & .container {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        @include tablet {
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            justify-content: unset;
+        }
+    }
+
+    &__logo-container {
+        margin-right: 67px;
+
+        @include tablet {
+            margin-right: none;
+        }
+
+        @include desktop {
+            margin-right: 38px;
+        }
+    }
+}
+
+.header__logo {
+    height: 43px;
+    width: 96px;
+    fill: var(--primary-text-color);
+
+    @include desktop {
+        height: 71px;
+        width: 158px;
+    }
+}
+
+.header__navigation {
+    display: none;
+
+    @include desktop {
+        display: block;
+        height: 100%;
+    }
+}
+
+.header__navigation__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+
+    &__element {
+        height: 100%;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__link {
+        display: block;
+        font-size: 18px;
+        line-height: 1.22;
+        color: var(--primary-text-color);
+        height: 100%;
+        padding-top: 21px;
+        padding-bottom: 28px;
+        transition: color var(--transition);
+
+        &:hover, &:focus {
+            color: var(--hover-color);
+        }
+    }
+}
+
+.menu-button {
+    padding: 10px 0;
+    background: none;
+
+    @include desktop {
+        display: none;
+    }
+
+    &__icon {
+        height: 16px;
+        width: 30px;
+        fill: var(--primary-text-color);
+        transition: var(--transition)
+    }
+
+    &:hover &__icon, &:focus &__icon {
+        fill: var(--hover-color);
+    }
+}
