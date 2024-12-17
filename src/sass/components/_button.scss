@@ -23,3 +23,24 @@
         background-color: var(--hover-color);
     }
 }
+
+.button--read-more {
+    color: var(--accent-color);
+    font-family: var(--special-font);
+    font-size: 16px;
+    padding: 10px 20px 10px 0;
+    background: none;
+    transition: color var(--transition);
+
+    &:hover, &:focus {
+        color: var(--hover-color);
+    }
+
+    @include tablet {
+        font-size: 18px;
+    }
+
+    @include desktop {
+        display: none;
+    }
+}
