@@ -1,6 +1,25 @@
+@use '../abstracts/mixins' as *;
+
 body {
     font-family: var(--font);
     color: var(--primary-text-color);
+    background-image: url(../../img/bg/mobile-body-bg.svg), url(../../img/bg/mobile-body-2-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 460.51px, 100% 1214.6px;
+    background-position: top 0 right 0, top 1886px right 0;
+
+    @include tablet {
+        background-image: url(../../img/bg/tablet-body-bg.svg), url(../../img/bg/tablet-body-2-bg.svg);
+        background-size: 100% 622px, 100% 1260px;
+        background-position: top 0 right 0, top 1142px right 0;
+    }
+
+    @include desktop {
+        background-image: url(../../img/bg/desktop-body-bg.svg), url(../../img/bg/desktop-body-2-bg.svg);
+        background-size: 100% 1035.52px, 100% 1599.7px;
+        background-position: top 0 right 0, top 1674.06px right 0;
+    }
+
 }
 
 img {

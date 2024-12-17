@@ -17,27 +17,53 @@
                     <use href="./img/icons.svg#icon-logo"></use>
                 </svg>
             </a>
-            <nav class="header__navigation">
-                <ul class="header__navigation__list">
-                    <li class="header__navigation__list__element">
-                        <a href="#about" class="header__navigation__list__link">About us</a>
+            <nav class="header__nav">
+                <ul class="header__nav__list">
+                    <li class="header__nav__list__element">
+                        <a href="#about" class="header__nav__list__link">About us</a>
                     </li>
-                    <li class="header__navigation__list__element">
-                        <a href="#program" class="header__navigation__list__link">Program</a>
+                    <li class="header__nav__list__element">
+                        <a href="#program" class="header__nav__list__link">Program</a>
                     </li>
-                    <li class="header__navigation__list__element">
-                        <a href="#reviews" class="header__navigation__list__link">Reviews</a>
+                    <li class="header__nav__list__element">
+                        <a href="#reviews" class="header__nav__list__link">Reviews</a>
                     </li>
-                    <li class="header__navigation__list__element">
-                        <a href="#contacts" class="header__navigation__list__link">Contacts</a>
+                    <li class="header__nav__list__element">
+                        <a href="#contacts" class="header__nav__list__link">Contacts</a>
                     </li>
                 </ul>
             </nav>
-            <button class="menu-button">
+            <button class="menu-button" data-menu-open>
                 <svg class="menu-button__icon">
                     <use href="./img/icons.svg#icon-menu"></use>
                 </svg>
             </button>
+            <div class="header__menu" data-menu>
+                <svg class="header__menu__logo">
+                    <use href="./img/icons.svg#icon-logo"></use>
+                </svg>
+                <button class="menu-button-close" data-menu-close>
+                    <svg class="menu-button-close__icon">
+                        <use href="./img/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <nav class="header__menu__nav">
+                    <ul class="header__menu__nav__list">
+                        <li class="header__menu__nav__list__element">
+                            <a href="#about" class="header__menu__nav__list__link">About us</a>
+                        </li>
+                        <li class="header__menu__nav__list__element">
+                            <a href="#program" class="header__menu__nav__list__link">Program</a>
+                        </li>
+                        <li class="header__menu__nav__list__element">
+                            <a href="#reviews" class="header__menu__nav__list__link">Reviews</a>
+                        </li>
+                        <li class="header__menu__nav__list__element">
+                            <a href="#contacts" class="header__menu__nav__list__link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 </body>
