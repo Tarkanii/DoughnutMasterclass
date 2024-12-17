@@ -5,9 +5,11 @@
 
 // Components
 
+@forward './components/button';
 @forward './components/container';
 @forward './components/section';
 
 // Layout
 
 @forward './layout/header';
+@forward './layout/hero';

@@ -1,0 +1,25 @@
+@use '../abstracts/mixins' as *;
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--button-text-color);
+    font-family: var(--special-font);
+    font-size: 18px;
+    height: 40px;
+    width: 145px;
+    border-radius: 25px;
+    background-color: var(--accent-color);
+    transition: background-color var(--transition);
+
+    @include desktop {
+        font-size: 24px;
+        height: 45px;
+        width: 158px;
+    }
+
+    &:hover, &:focus {
+        background-color: var(--hover-color);
+    }
+}

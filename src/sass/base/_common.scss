@@ -3,21 +3,33 @@
 body {
     font-family: var(--font);
     color: var(--primary-text-color);
-    background-image: url(../../img/bg/mobile-body-bg.svg), url(../../img/bg/mobile-body-2-bg.svg);
+    background-image: url(../../img/bg/mobile-hero-doughnuts-bg.png), url(../../img/bg/mobile-body-bg.svg), url(../../img/bg/mobile-body-2-bg.svg);
     background-repeat: no-repeat;
-    background-size: 100% 460.51px, 100% 1214.6px;
-    background-position: top 0 right 0, top 1886px right 0;
+    background-size: 129.69px 164.52px, 100% 460.51px, 100% 1214.6px;
+    background-position: top -51px left calc(50% - 112px), top 0 right 0, top 1886px right 0;
+
+    @include retina-display {
+        background-image: url(../../img/bg/mobile-hero-doughnuts-bg@2x.png), url(../../img/bg/mobile-body-bg.svg), url(../../img/bg/mobile-body-2-bg.svg);
+    }
 
     @include tablet {
-        background-image: url(../../img/bg/tablet-body-bg.svg), url(../../img/bg/tablet-body-2-bg.svg);
-        background-size: 100% 622px, 100% 1260px;
-        background-position: top 0 right 0, top 1142px right 0;
+        background-image: url(../../img/bg/hero-doughnuts-bg.png), url(../../img/bg/tablet-body-bg.svg), url(../../img/bg/tablet-body-2-bg.svg);
+        background-size: 377.89px 396px, 100% 622px, 100% 1260px;
+        background-position: top -35px left calc(50% + 60px), top 0 right 0, top 1142px right 0;
+
+        @include retina-display {
+            background-image: url(../../img/bg/hero-doughnuts-bg@2x.png), url(../../img/bg/tablet-body-bg.svg), url(../../img/bg/tablet-body-2-bg.svg);
+        }
     }
 
     @include desktop {
-        background-image: url(../../img/bg/desktop-body-bg.svg), url(../../img/bg/desktop-body-2-bg.svg);
-        background-size: 100% 1035.52px, 100% 1599.7px;
-        background-position: top 0 right 0, top 1674.06px right 0;
+        background-image: url(../../img/bg/spoon-bg.png), url(../../img/bg/hero-doughnuts-bg.png), url(../../img/bg/desktop-body-bg.svg), url(../../img/bg/desktop-body-2-bg.svg);
+        background-size: 245px 417.61px, 793px 831px, 100% 1035.52px, 100% 1599.7px;
+        background-position: top 155px left calc(50% - 625px), top -171px right calc(50% - 320px), top 0 right 0, top 1674.06px right 0;
+
+        @include retina-display {
+            background-image: url(../../img/bg/spoon-bg@2x.png), url(../../img/bg/hero-doughnuts-bg@2x.png), url(../../img/bg/desktop-body-bg.svg), url(../../img/bg/desktop-body-2-bg.svg);
+        }
     }
 
 }
