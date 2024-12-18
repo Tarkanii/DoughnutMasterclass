@@ -58,8 +58,6 @@
     }
 
     &__title {
-        font-family: var(--special-font);
-        font-size: 24px;
         text-align: center;
         margin-bottom: 15px;
 
@@ -69,7 +67,6 @@
         }
 
         @include desktop {
-            font-size: 34px;
             margin-bottom: 20px;
         }
     }
@@ -83,32 +80,9 @@
             width: 100%;
         }
 
-        &:last-of-type {
-            height: 0;
-            opacity: 0;
-            margin-bottom: 0;
-            visibility: hidden;
-            transform: translateY(-80px);
-            transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
-
-            &:last-of-type:has( + .about-us__read-more-button[data-open = 'true']) {
-                height: auto;
-                opacity: 1;
-                margin-bottom: 10px;
-                visibility: visible;
-                transform: translateY(0);
-            }
-
-            @include desktop {
-                height: auto;
-                opacity: 1;
-                margin-bottom: 0;
-                visibility: visible;
-                transform: translateY(0);
-            }
-        }
-
         &:nth-of-type(2):has( ~ .about-us__read-more-button:not([data-open])) {
+            margin-bottom: 10px;
+            
             @include tablet {
                 margin-bottom: 10px;
             }
@@ -116,6 +90,30 @@
             @include desktop {
                 margin-bottom: 25px;
             }
+        }
+    }
+
+    &__hidden-text {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-80px);
+        transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
+
+        &:has( + .about-us__read-more-button[data-open = 'true']) {
+            height: auto;
+            opacity: 1;
+            margin-bottom: 10px;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        @include desktop {
+            height: auto;
+            opacity: 1;
+            margin-bottom: 0;
+            visibility: visible;
+            transform: translateY(0);
         }
     }
 }
