@@ -498,12 +498,12 @@
                         <p class="registration__content__info__place">New York</p>
                         <p class="registration__content__info__price">$ 699</p>
                     </div>
-                    <form name="register_form" class="registration__content__form">
+                    <form name="register_form" class="form registration__content__form">
                         <div class="registration__inputs__container">
-                            <p class="registration__content__form__title">Apply your personal info for registration</p>
-                            <input name="register_name" class="registration__content__form__input" type="text" placeholder="Your name">
-                            <input name="register_phone" class="registration__content__form__input" type="tel" placeholder="Phone number">
-                            <input name="register_email" class="registration__content__form__input" type="email" placeholder="Email">
+                            <p class="form__title registration__content__form__title">Apply your personal info for registration</p>
+                            <input name="register_name" class="form__input registration__content__form__input" type="text" placeholder="Your name">
+                            <input name="register_phone" class="form__input registration__content__form__input" type="tel" placeholder="Phone number">
+                            <input name="register_email" class="form__input registration__content__form__input" type="email" placeholder="Email">
                         </div>
                         <button class="button" type="submit">Register</button>
                     </form>
@@ -511,5 +511,54 @@
             </div>
         </section>
     </main>
+    <!-- Footer -->
+    <footer class="section footer">
+        <div class="container footer__container">
+            <h2 class="section__title footer__title">Contact</h2>
+            <form name="footer_form" class="form footer__form">
+                <p class="form__title footer__form__title">We will answer any question!</p>
+                <input class="form__input footer__form__input" name="footer_email" type="email" placeholder="Email">
+                <input class="form__input footer__form__input" name="footer_question" type="text" placeholder="Type your question">
+                <button class="button" type="submit">Send</button>
+            </form>
+            <ul class="footer__icons__list">
+                <li class="footer__icons__list__element">
+                    <a href="/" class="footer__icons__list__link">
+                        <svg class="footer__icons__list__icon">
+                            <use href="./img/icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__icons__list__element">
+                    <a href="/" class="footer__icons__list__link">
+                        <svg class="footer__icons__list__icon">
+                            <use href="./img/icons.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class=footer__icons__list__element">
+                    <a href="/" class="footer__icons__list__link">
+                        <svg class="footer__icons__list__icon">
+                            <use href="./img/icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <address class="footer__address">
+                <a class="footer__address__link" href="tel:(910)222-8855">
+                    <svg class="footer__address__link__icon">
+                        <use href="./img/icons.svg#icon-phone"></use>
+                    </svg>
+                    (910)222-8855
+                </a>
+                <a class="footer__address__link" href="tel:(910)222-8855">
+                    <svg class="footer__address__link__icon">
+                        <use href="./img/icons.svg#icon-mark"></use>
+                    </svg>
+                    New York
+                </a>
+            </address>
+        </div>
+    </footer>
 </body>
 </html>

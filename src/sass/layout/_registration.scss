@@ -109,7 +109,6 @@
     }
 
     &__title {
-        font-size: 16px;
         text-align: center;
         margin-bottom: 17px;
 
@@ -118,25 +117,10 @@
         }
 
         @include desktop {
-            font-size: 18px;
             margin-bottom: 13px;
         } 
     }
-
-    &__input {
-        font-family: var(--font);
-        font-size: 16px;
-        width: 100%;
-        padding: 2px;
-        border: none;
-        border-bottom: 1px solid var(--accent-color);
-    }
-
-    &__input::placeholder {
-        color: var(--accent-color);
-        opacity: 50%;
-    }
-
+    
     &__input:not(:last-child) {
         margin-bottom: 25px;
 

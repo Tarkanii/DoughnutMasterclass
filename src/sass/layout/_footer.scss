@@ -1,0 +1,163 @@
+@use '../abstracts/mixins' as *;
+
+.footer {
+    padding: 20px 0 20px 0;
+    background-image: url(../../img/bg/footer-bg.png);
+    background-size: 113px 99px;
+    background-position: calc(50% + 130px) calc(100% + 35px);
+    background-repeat: no-repeat;
+
+    @include tablet {
+        background-size: 207px 182px;
+        background-position: calc(50% + 340px) calc(100% + 40px);
+        padding: 35px 0 20px 0;
+    }
+
+    @include desktop {
+        background-size: 362px 318px;
+        background-position: calc(50% + 505px) calc(100% + 135px);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 20px;
+
+        @include tablet {
+            margin-bottom: 10px;
+        }
+
+        @include desktop {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 42px;
+
+    @include tablet {
+        margin-bottom: 50px;
+    }
+
+    @include desktop {
+        margin-bottom: 82px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__input {
+        max-width: 265px;
+
+        @include tablet {
+            max-width: 410px;
+        }
+
+        @include desktop {
+            max-width: 430px;
+        }
+
+        &:first-of-type {
+            margin-bottom: 25px;
+
+            @include tablet {
+                margin-bottom: 15px;
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 37px;
+
+            @include tablet {
+                margin-bottom: 27px;
+            }
+        }
+    }
+}
+
+.footer__icons__list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 34px;
+
+    @include tablet {
+        margin-bottom: 50px;
+    }
+
+    @include desktop {
+        margin-bottom: 35px;
+    }
+
+    &__icon {
+        height: 15px;
+        width: 15px;
+        fill: var(--primary-text-color);
+        transition: fill var(--transition);
+    
+        @include desktop {
+            height: 19px;
+            width: 19px;
+        }
+    }
+
+    &__element:first-child &__icon {
+        width: 19px;
+    
+        @include desktop {
+            width: 24px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+    
+        &:hover .footer__icons__list__icon, &:focus .footer__icons__list__icon {
+            fill: var(--hover-color);
+        }
+    }
+}
+
+.footer__address {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &__link {
+        color: var(--primary-text-color);
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        transition: color var(--transition);
+
+        &:hover, &:focus {
+            color: var(--accent-color);
+        }
+    }
+
+    &__link__icon {
+        height: 15px;
+        width: 15px;
+        margin-right: 7px;
+        fill: var(--primary-text-color);
+        transition: fill var(--transition);
+    }
+
+    &__link:hover &__link__icon, &__link:focus &__link__icon {
+        fill: var(--accent-color);
+    }
+}

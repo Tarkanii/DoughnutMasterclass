@@ -12,6 +12,14 @@
     &__title {
         text-align: center;
         margin-bottom: 30px;
+
+        @include tablet {
+            margin-bottom: 10px;
+        }
+
+        @include desktop {
+            margin-bottom: 25px;
+        }
     }
 
 }
