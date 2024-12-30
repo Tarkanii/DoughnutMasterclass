@@ -1,0 +1,121 @@
+@use '../abstracts/mixins' as *;
+
+.about-us {
+    padding-bottom: 10px;
+
+    @include tablet {
+        padding-top: 20px;
+    }
+
+    @include desktop {
+        padding-bottom: 40px;
+    }
+
+    &__img {
+        height: 309.66px;
+        max-width: 100%;
+        margin-bottom: 5px;
+
+        @include tablet {
+            flex-shrink: 0;
+            height: 352px;
+            width: 329.65px;
+            margin-bottom: unset;
+            margin-right: 25px;
+        }
+
+        @include desktop {
+            height: 546.71px;
+            width: 512px;
+            margin-right: 76px;
+        }
+    }
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            position: relative;
+            left: -56px;
+            flex-direction: row;
+        }
+
+        @include desktop {
+            left: -156px;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        @include tablet {
+            min-width: 336px;
+        }
+
+        @include desktop {
+            min-width: 392px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 15px;
+
+        @include tablet {
+            text-align: unset;
+            margin-bottom: 10px;
+        }
+
+        @include desktop {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        margin-bottom: 20px;
+
+        @include desktop {
+            font-size: 18px;
+            width: 100%;
+        }
+
+        &:nth-of-type(2):has( ~ .about-us__read-more-button:not([data-open])) {
+            margin-bottom: 10px;
+            
+            @include tablet {
+                margin-bottom: 10px;
+            }
+
+            @include desktop {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    &__hidden-text {
+        font-size: 16px;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-80px);
+        transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
+
+        &:has( + .about-us__read-more-button[data-open = 'true']) {
+            height: auto;
+            opacity: 1;
+            margin-bottom: 10px;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        @include desktop {
+            font-size: 18px;
+            height: auto;
+            opacity: 1;
+            margin-bottom: 0;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+}

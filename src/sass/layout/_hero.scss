@@ -1,0 +1,109 @@
+@use '../abstracts/mixins' as *;
+
+.hero {
+    padding-top: 83px;
+
+    @include tablet {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @include desktop {
+        padding-top: 159px;
+        padding-bottom: 56px;
+    }
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet {
+            align-items: start;
+        }
+    }
+}
+
+.hero__title {
+    font-family: var(--special-font);
+    font-size: 30px;
+    line-height: 1.26;
+    text-align: center;
+    max-width: 224px;
+    margin-bottom: 5px;
+
+    @include tablet {
+        text-align: unset;
+    }
+
+    @include desktop {
+        font-size: 64px;
+        line-height: 1.01;
+        max-width: 490px;
+        margin-bottom: 15px;
+    }
+}
+
+.hero__hosted-by {
+    font-size: 16px;
+    line-height: 1.22;
+    font-weight: 500;
+    margin-bottom: 37px;
+
+    @include tablet {
+        margin-bottom: 26px;
+    }
+
+    @include desktop {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+.hero__button {
+    margin-bottom: 40px;
+
+    @include tablet {
+        margin-bottom: 26px;
+    }
+
+    @include desktop {
+        margin-bottom: 60px;
+    }
+}
+
+.hero__icons__list {
+    display: flex;
+    align-items: center;
+}
+
+.hero__icons__list__element:first-child .hero__icons__list__icon {
+    width: 19px;
+
+    @include desktop {
+        width: 24px;
+    }
+}
+
+.hero__icons__list__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+
+    &:hover .hero__icons__list__icon, &:focus .hero__icons__list__icon {
+        fill: var(--hover-color);
+    }
+}
+
+.hero__icons__list__icon {
+    height: 15px;
+    width: 15px;
+    fill: var(--primary-text-color);
+    transition: fill var(--transition);
+
+    @include desktop {
+        height: 19px;
+        width: 19px;
+    }
+}

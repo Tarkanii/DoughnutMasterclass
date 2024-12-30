@@ -1,0 +1,219 @@
+@use '../abstracts/mixins' as *;
+
+.reviews {
+    padding: 40px 0 30px;
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+
+        @include tablet {
+            margin-bottom: 10px;
+        }
+
+        @include desktop {
+            margin-bottom: 25px;
+        }
+    }
+
+}
+
+.people-slider {
+    cursor: grab;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    user-select: none;
+
+    &.grabbing {
+        cursor: grabbing;
+    }
+
+    @include tablet {
+        padding-left: 219px;
+        padding-right: 219px;
+        height: 271px;
+        max-width: 626px;
+    }
+
+    @include desktop {
+        padding-left: 171px;
+        padding-right: 171px;
+        height: 314px;
+    }
+}
+
+.people-slider__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+
+    @include tablet {
+        min-width: calc(626px / 3);
+    }
+
+    @include desktop {
+        min-width: calc((626px - 234px) / 2);
+    }
+
+    &:not(:last-child) {
+        @include tablet {
+            // margin-right: 50px;
+        }
+
+        @include desktop {
+            // margin-right: 80px;
+        }
+    }
+
+    &.selected {
+        @include tablet {
+            padding-top: 24px;
+        }
+
+        @include desktop {
+            margin: 0 25px;
+            padding-top: 19px;
+            min-width: 234px;
+        }
+    }
+
+    &.selected &__img {
+        @include tablet {
+            height: 186px;
+            width: 186px;
+        }
+        
+        @include desktop {
+            height: 234px;
+            width: 234px;
+        }
+    }
+
+    &__img {
+        height: 110px;
+        width: 110px;
+        margin-bottom: 6px;
+        transition: height var(--transition), width var(--transition);
+
+        @include desktop {
+            height: 136px;
+            width: 136px;
+        }
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__star {
+        
+        &:not(:last-child) {
+            margin-right: 4px;
+        }
+
+        &__icon {
+            height: 24px;
+            width: 24px;
+            stroke: var(--accent-color);
+            fill: none;
+        }
+
+        &.star--filled &__icon {
+            fill: var(--accent-color);
+        }
+    }
+
+    &__name {
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 500;
+    }
+
+}
+
+.reviews-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 213px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+
+    &:has( > .selected) {
+        height: auto;
+    }
+
+    @include tablet {
+        height: 96.8px;
+        max-width: 626px;
+    }
+
+    @include desktop {
+        height: 132px;
+    }
+}
+
+.reviews-container__element {
+    position: absolute;
+    font-size: 16px;
+    line-height: 1.21;
+    letter-spacing: 0.1px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+    max-width: 100%;
+
+    &.selected {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @include desktop {
+        font-size: 18px;
+    }
+}
+
+.slider-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__number {
+        color: var(--accent-color);
+        font-size: 14px;
+        margin: 0 12px 0;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        background: none;
+
+        &:first-of-type {
+            transform: rotate(180deg);
+        }
+
+        &__icon {
+            height: 20px;
+            width: 35px;
+            fill: var(--accent-color);
+        }
+    }
+}

@@ -1,11 +1,20 @@
 :root {
     --accent-color: #AB816C;
     --primary-text-color: #2E2520;
+    --button-text-color: #FFFFFF;
     --hover-color: #876655;
+    --menu-bg: #FEF3E4E5;
+    --program-info-bg: #FEF3E4;
+    --program-info-shadow: #AB816C40;
+    --registration-bg: #FFFFFF;
+    --registration-shadow: #AB816C26;
+    --registration-border-color: #AB816C50;
 
     --font: "Montserrat", sans-serif;
     --special-font: "Caveat Brush", cursive;
+
+    --transition: linear 200ms;
 }
 
 $tablet-break-point: 768px;
-$desktop-break-point: 1200px;
+$desktop-break-point: 1280px;

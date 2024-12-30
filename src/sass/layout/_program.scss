@@ -1,0 +1,208 @@
+@use '../abstracts/mixins' as *;
+
+.program {
+    padding: 20px 0 0;
+
+    @include tablet {
+        padding: 0 0 20px;
+    }
+
+    & .container {
+        display: flex;
+        flex-direction: column;
+        
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__content {
+        font-size: 16px;
+        margin-bottom: 57px;
+
+        @include tablet {
+            max-width: 298px;
+            margin-right: 38px;
+            margin-bottom: 0;
+        }
+
+        @include desktop {
+            font-size: 18px;
+            max-width: 392px;
+            margin-right: 40px;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 15px;
+
+        @include tablet {
+            text-align: unset;
+            margin-bottom: 10px;
+        }
+
+        @include desktop {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 10px;
+
+        @include desktop {
+            margin-bottom: 21px;
+        }
+    }
+
+    &__activities {
+        margin-bottom: 10px;
+
+        &:has( ~ .program__read-more-button[data-open = 'true']) {
+            margin-bottom: 15px;
+
+            @include desktop {
+                margin-bottom: 21px;
+            }
+        }
+
+        @include desktop {
+            margin-bottom: 21px;
+        }
+    }
+
+    &__activity {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+
+            @include desktop {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__hidden-text {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-80px);
+        transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
+
+        &:has( + .program__read-more-button[data-open = 'true']) {
+            height: auto;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        @include desktop {
+            height: auto;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+
+}
+
+.program__information-list {
+    --side-length: 142px;
+    --img-indent: 35px;
+    --top-indent: 25px;
+    --row-gap: 58.56px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: calc(2 * (var(--side-length) + var(--img-indent)) + var(--top-indent) + var(--row-gap));
+
+    @include desktop {
+        --side-length: 180px;
+        --img-indent: 43px;
+        --top-indent: 56px;
+        --row-gap: 61px;
+    }
+
+    &__element:nth-child(2n + 1) {
+        margin-bottom: var(--row-gap);
+    }
+
+    &__element:nth-child(-n + 2) {
+        margin-right: 5px;
+
+        @include tablet {
+            margin-right: 15px;
+        }
+
+        @include desktop {
+            margin-right: 32px;
+        }
+    }
+
+    &__element:nth-child(3) {
+        margin-top: var(--top-indent);
+    }
+
+    &__element {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: var(--side-length);
+        width: var(--side-length);
+        padding-top: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 4px 0 var(--program-info-shadow);
+        background-color: var(--program-info-bg);
+
+        @include desktop {
+            padding-top: 63px;
+        }
+    
+        &__img {
+            position: absolute;
+            top: calc(var(--img-indent) * -1);
+            right: 50%;
+            height: 84.41px;
+            width: 76.52px;
+            transform: translateX(50%);
+
+            @include desktop {
+                height: 107px;
+                width: 97px;
+            }
+        }
+    
+        &__title {
+            font-family: var(--special-font);
+            font-size: 18px;
+            margin-bottom: 12px;
+
+            @include desktop {
+                font-size: 24px;
+                margin-bottom: 16px;
+            }
+        }
+    
+        &__text {
+            font-size: 14px;
+            margin-bottom: 13px;
+            
+            @include desktop {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+        }
+    
+        &__icon {
+            height: 20px;
+            width: 20px;
+            fill: var(--accent-color);
+
+            @include desktop {
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+}

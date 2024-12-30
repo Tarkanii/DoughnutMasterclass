@@ -1,0 +1,140 @@
+@use '../abstracts/mixins' as *;
+
+.registration {
+    padding: 0 0 25px;
+
+    @include tablet {
+        padding: 20px 0 35px;
+        background-image: url(../../img/bg/registration-doughnut-bg.png);
+        background-size: 257px;
+        background-position: calc(50% - 280px) 30px;
+        background-repeat: no-repeat;
+
+        @include retina-display {
+            background-image: url(../../img/bg/registration-doughnut-bg@2x.png);
+        }
+    }
+
+    @include desktop {
+        padding: 38px 0 35px;
+        background-position: calc(50% - 445px) 60px;
+    }
+
+    &__title {
+        display: none;
+
+        @include tablet {
+            display: block;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+    }
+
+}
+
+.registration__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 12px 47px;
+    background-color: var(--registration-bg);
+    border-radius: 150px 150px 0 0;
+    box-shadow: 4px 4px 4px var(--registration-shadow), -4px -4px 4px var(--registration-shadow);
+
+    @include tablet {
+        flex-direction: row;
+        align-items: stretch;
+        padding: 35px 21px 35px 35px;
+        border-radius: 150px;
+    }
+
+    @include desktop {
+        padding: 35px 98px 35px 107px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+.registration__content__info {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.21;
+    text-align: center;
+    width: 100%;
+    padding: 0 0 20px 0;
+    margin-bottom: 11px;
+    border-bottom: 1.5px solid var(--registration-border-color);
+
+    @include tablet {
+        text-align: end;
+        text-wrap: nowrap;
+        width: auto;
+        padding: 19px 30px 0 0;
+        margin-bottom: 0;
+        margin-right: 30px;
+        border-bottom: none;
+        border-right: 1.5px solid var(--registration-border-color);
+    }
+
+    @include desktop {
+        font-size: 20px;
+        padding: 19px 30px 69px 0;
+    }
+
+    &__place {
+        margin-bottom: 25px;
+
+        @include tablet {
+            margin-bottom: 34px;
+        }
+    }
+
+}
+
+.registration__content__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include tablet {
+        flex-direction: row;
+        width: auto;
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 17px;
+
+        @include tablet {
+            text-align: start;
+        }
+
+        @include desktop {
+            margin-bottom: 13px;
+        } 
+    }
+    
+    &__input:not(:last-child) {
+        margin-bottom: 25px;
+
+        @include tablet {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.registration__inputs__container {
+    margin: 0 0 37px 0;
+
+    @include tablet {
+        max-width: 230px;
+        margin: 0 25px 0 0;
+    }
+}

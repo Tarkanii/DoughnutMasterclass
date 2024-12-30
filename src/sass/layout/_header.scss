@@ -1,0 +1,195 @@
+@use '../abstracts/mixins' as *;
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 7px;
+
+    @include tablet {
+        padding-top: 27px;
+    }
+
+    @include desktop {
+        padding-top: 31px;
+    }
+
+    & .container {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        @include tablet {
+            align-items: start;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            justify-content: unset;
+        }
+    }
+
+    &__logo-container {
+        margin-right: 67px;
+
+        @include tablet {
+            margin-right: none;
+        }
+
+        @include desktop {
+            margin-right: 38px;
+        }
+    }
+}
+
+.header__logo {
+    height: 43px;
+    width: 96px;
+    fill: var(--primary-text-color);
+
+    @include desktop {
+        height: 71px;
+        width: 158px;
+    }
+}
+
+.header__nav {
+    display: none;
+
+    @include desktop {
+        display: block;
+        height: 100%;
+    }
+}
+
+.header__nav__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+
+    &__element {
+        height: 100%;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__link {
+        display: block;
+        font-size: 18px;
+        line-height: 1.22;
+        color: var(--primary-text-color);
+        height: 100%;
+        padding-top: 21px;
+        padding-bottom: 28px;
+        text-wrap: nowrap;
+        transition: color var(--transition);
+
+        &:hover, &:focus {
+            color: var(--hover-color);
+        }
+    }
+}
+
+.menu-button {
+    padding: 10px 0;
+    background: none;
+
+    @include desktop {
+        display: none;
+    }
+
+    &__icon {
+        height: 16px;
+        width: 30px;
+        fill: var(--primary-text-color);
+        transition: var(--transition)
+    }
+
+    &:hover &__icon, &:focus &__icon {
+        fill: var(--hover-color);
+    }
+}
+
+.header__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 25px;
+    background-color: var(--menu-bg);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+
+    &.is-open {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    @include desktop {
+        display: none;
+    }
+
+    &__logo {
+        height: 85px;
+        width: 190px;
+        margin-bottom: 40px;
+    }
+}
+
+.header__menu__nav__list__element {
+    font-size: 24px;
+    line-height: 1.09;
+
+    &:not(:last-child) {
+        margin-bottom: 45px;
+
+        @include tablet {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.header__menu__nav__list__link {
+    color: var(--primary-text-color);
+    transition: color var(--transition);
+
+    &:hover, &:focus {
+        color: var(--hover-color);
+    }
+}
+
+.menu-button-close {
+    position: absolute;
+    top: 8px;
+    right: calc(50% - 151px);
+    padding: 12px;
+    background: none;
+
+    @include tablet {
+        top: 25px;
+        right: calc(50% - 317px);
+    }
+
+    &__icon {
+        height: 18px;
+        width: 18px;
+        fill: var(--primary-text-color);
+        transition: fill var(--transition);
+    }
+
+    &:hover &__icon, &:focus &__icon {
+        fill: var(--hover-color);
+    }
+}

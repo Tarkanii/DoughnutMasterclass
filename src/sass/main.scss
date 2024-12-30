@@ -1,0 +1,21 @@
+// Base
+
+@forward './base/reset';
+@forward './base/common';
+
+// Components
+
+@forward './components/button';
+@forward './components/container';
+@forward './components/section';
+@forward './components/form';
+
+// Layout
+
+@forward './layout/header';
+@forward './layout/hero';
+@forward './layout/about-us';
+@forward './layout/program';
+@forward './layout/reviews';
+@forward './layout/registration';
+@forward './layout/footer';

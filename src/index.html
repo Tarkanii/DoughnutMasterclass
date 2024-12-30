@@ -6,9 +6,560 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Doughnut Class</title>
+    <link rel="icon" href="./img/favicon.ico">
+    <title>Doughnut Masterclass</title>
 </head>
 <body>
-    
+    <!-- Header -->
+    <header class="section header">
+        <div class="container">
+            <a href="/" class="header__logo-container">
+                <svg class="header__logo">
+                    <use href="./img/icons.svg#icon-logo"></use>
+                </svg>
+            </a>
+            <nav class="header__nav">
+                <ul class="header__nav__list">
+                    <li class="header__nav__list__element">
+                        <a href="#about" class="header__nav__list__link">About us</a>
+                    </li>
+                    <li class="header__nav__list__element">
+                        <a href="#program" class="header__nav__list__link">Program</a>
+                    </li>
+                    <li class="header__nav__list__element">
+                        <a href="#reviews" class="header__nav__list__link">Reviews</a>
+                    </li>
+                    <li class="header__nav__list__element">
+                        <a href="#contacts" class="header__nav__list__link">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="menu-button" data-menu-open>
+                <svg class="menu-button__icon">
+                    <use href="./img/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <div class="header__menu" data-menu>
+                <svg class="header__menu__logo">
+                    <use href="./img/icons.svg#icon-logo"></use>
+                </svg>
+                <button class="menu-button-close" data-menu-close>
+                    <svg class="menu-button-close__icon">
+                        <use href="./img/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <nav class="header__menu__nav">
+                    <ul class="header__menu__nav__list">
+                        <li class="header__menu__nav__list__element">
+                            <a href="#about" class="header__menu__nav__list__link">About us</a>
+                        </li>
+                        <li class="header__menu__nav__list__element">
+                            <a href="#program" class="header__menu__nav__list__link">Program</a>
+                        </li>
+                        <li class="header__menu__nav__list__element">
+                            <a href="#reviews" class="header__menu__nav__list__link">Reviews</a>
+                        </li>
+                        <li class="header__menu__nav__list__element">
+                            <a href="#contacts" class="header__menu__nav__list__link">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Hero Section -->
+        <section class="section hero">
+            <div class="container">
+                <h1 class="hero__title">Donut Masterclass with the Donut King</h1>
+                <p class="hero__hosted-by">Hosted by Eva Green</p>
+                <a href="#registration" class="hero__button button">Register</a>
+                <ul class="hero__icons__list">
+                    <li class="hero__icons__list__element">
+                        <a href="/" class="hero__icons__list__link">
+                            <svg class="hero__icons__list__icon">
+                                <use href="./img/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="hero__icons__list__element">
+                        <a href="/" class="hero__icons__list__link">
+                            <svg class="hero__icons__list__icon">
+                                <use href="./img/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="hero__icons__list__element">
+                        <a href="/" class="hero__icons__list__link">
+                            <svg class="hero__icons__list__icon">
+                                <use href="./img/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- About Us Section -->
+        <section class="section about-us" id="about">
+            <div class="container">
+                <picture class="about-us__img">
+                    <!-- Webp images -->
+                    <source srcset="./img/content/about-us-pic.webp 1x, ./img/content/about-us-pic@2x.webp 2x" type="image/webp">
+                    <!-- Png images -->
+                    <source srcset="./img/content/about-us-pic.png 1x, ./img/content/about-us-pic@2x.png 2x" type="image/png">
+                    <img src="./img/content/about-us-pic.png" alt="box with doughnuts">
+                </picture>
+                <div class="about-us__content">
+                    <h2 class="about-us__title section__title">About us</h2>
+                    <p class="about-us__text">
+                        Oh My Donut is the shop which adores tasty deserts and spend hours to create sophisticated donuts which will save the world!
+                    </p>
+                    <p class="about-us__text">
+                        Eva has been baking since she was six years old and over the last 49 years, she has created hundreds of cakes for weddings and has baked for many celebrities. Eva and our shop have received multiple awards & recognition for excellence.
+                    </p>
+                    <p class="about-us__hidden-text">
+                        We are going to teach you how to cook with passion and sparkles in your eyes! We love what we do and believe you will enjoy our cooking atmosphere!
+                    </p>
+                    <button class="about-us__read-more-button button--read-more" data-read-more>Read more</button>
+                </div>
+            </div>
+        </section>
+        <!-- Program Section -->
+        <section class="section program" id="program">
+            <div class="container">
+                <div class="program__content">
+                    <h2 class="program__title section__title">Program</h2>
+                    <p class="program__text">Indulge in this immersive sweet treat experience with The Chef Donut Queen in her New York donut shop!</p>    
+                    <ul class="program__activities">
+                        <li class="program__activity">> A stand up history of donuts</li>
+                        <li class="program__activity">> Make 3 donut flavors of your choice</li>
+                        <li class="program__activity">> Enjoy all-you-can-eat donuts</li>
+                        <li class="program__activity">> Cocktail pairings and coffee included</li>
+                        <li class="program__activity">> Photoshoot by professional photographer</li>
+                        <li class="program__activity">> Secret receipt of cooking from Eva</li>
+                        <li class="program__activity">> All products are included in the price</li>
+                    </ul>
+                    <p class="program__hidden-text">
+                        Come with your dear people and friends
+                        and you will spend an unforgettable time and
+                        will become a real professional in donuts cooking!
+                    </p>
+                    <button class="program__read-more-button button--read-more" data-read-more>Read more</button>
+                </div>
+                <ul class="program__information-list">
+                    <li class="program__information-list__element">
+                        <picture class="program__information-list__element__img">
+                            <!-- Webp -->
+                            <source srcset="./img/content/doughnut-1.webp 1x, ./img/content/doughnut-1@2x.webp 2x" type="image/webp">
+                            <!-- Png -->
+                            <source srcset="./img/content/doughnut-1.png 1x, ./img/content/doughnut-1@2x.png 2x" type="image/png">
+                            <img src="./img/content/doughnut-1.png" alt="doughnut">
+                        </picture>
+                        <h3 class="program__information-list__element__title">Type of the event</h3>
+                        <p class="program__information-list__element__text">Cooking classes</p>
+                        <svg class="program__information-list__element__icon">
+                            <use href="./img/icons.svg#icon-chef-hat"></use>
+                        </svg>
+                    </li>
+                    <li class="program__information-list__element">
+                        <picture class="program__information-list__element__img">
+                            <!-- Webp -->
+                            <source srcset="./img/content/doughnut-3.webp 1x, ./img/content/doughnut-3@2x.webp 2x" type="image/webp">
+                            <!-- Png -->
+                            <source srcset="./img/content/doughnut-3.png 1x, ./img/content/doughnut-3@2x.png 2x" type="image/png">
+                            <img src="./img/content/doughnut-3.png" alt="doughnut">
+                        </picture>
+                        <h3 class="program__information-list__element__title">Time of the event</h3>
+                        <p class="program__information-list__element__text"><time datetime="18:30">18:30</time> (2.5 hours)</p>
+                        <svg class="program__information-list__element__icon">
+                            <use href="./img/icons.svg#icon-clock"></use>
+                        </svg>
+                    </li>
+                    <li class="program__information-list__element">
+                        <picture class="program__information-list__element__img">
+                            <!-- Webp -->
+                            <source srcset="./img/content/doughnut-2.webp 1x, ./img/content/doughnut-2@2x.webp 2x" type="image/webp">
+                            <!-- Png -->
+                            <source srcset="./img/content/doughnut-2.png 1x, ./img/content/doughnut-2@2x.png 2x" type="image/png">
+                            <img src="./img/content/doughnut-2.png" alt="doughnut">
+                        </picture>
+                        <h3 class="program__information-list__element__title">Number of guests</h3>
+                        <p class="program__information-list__element__text">1 to 20</p>
+                        <svg class="program__information-list__element__icon">
+                            <use href="./img/icons.svg#icon-people"></use>
+                        </svg>
+                    </li>
+                    <li class="program__information-list__element">
+                        <picture class="program__information-list__element__img">
+                            <!-- Webp -->
+                            <source srcset="./img/content/doughnut-4.webp 1x, ./img/content/doughnut-4@2x.webp 2x" type="image/webp">
+                            <!-- Png -->
+                            <source srcset="./img/content/doughnut-4.png 1x, ./img/content/doughnut-4@2x.png 2x" type="image/png">
+                            <img src="./img/content/doughnut-4.png" alt="doughnut">
+                        </picture>
+                        <h3 class="program__information-list__element__title">The host speaks</h3>
+                        <p class="program__information-list__element__text">English, French</p>
+                        <svg class="program__information-list__element__icon">
+                            <use href="./img/icons.svg#icon-chat"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Reviews Section -->
+        <section class="section reviews" id="reviews">
+            <div class="container">
+                <h2 class="reviews__title section__title">Reviews</h2>
+                <ul class="people-slider">
+                    <li class="people-slider__element selected">
+                        <picture class="people-slider__element__img">
+                            <!-- Webp -->
+                            <source srcset="./img/content/client-1.webp 1x, ./img/content/client-1@2x.webp 2x" type="image/webp">
+                            <!-- Png -->
+                            <source srcset="./img/content/client-1.png 1x, ./img/content/client-1@2x.png 2x" type="image/png">
+                            <img src="./img/content/client-1.png" alt="client">
+                        </picture>
+                        <ul class="people-slider__element__stars">
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <h3 class="people-slider__element__name">John</h3>
+                    </li>
+                    <li class="people-slider__element">
+                        <picture class="people-slider__element__img">
+                            <!-- Webp -->
+                            <source srcset="./img/content/client-2.webp 1x, ./img/content/client-2@2x.webp 2x" type="image/webp">
+                            <!-- Png -->
+                            <source srcset="./img/content/client-2.png 1x, ./img/content/client-2@2x.png 2x" type="image/png">
+                            <img src="./img/content/client-2.png" alt="client">
+                        </picture>
+                        <ul class="people-slider__element__stars">
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <h3 class="people-slider__element__name">Will</h3>
+                    </li>
+                    <li class="people-slider__element">
+                        <picture class="people-slider__element__img">
+                            <!-- Webp -->
+                            <source srcset="./img/content/client-3.webp 1x, ./img/content/client-3@2x.webp 2x" type="image/webp">
+                            <!-- Png -->
+                            <source srcset="./img/content/client-3.png 1x, ./img/content/client-3@2x.png 2x" type="image/png">
+                            <img src="./img/content/client-3.png" alt="client">
+                        </picture>
+                        <ul class="people-slider__element__stars">
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <h3 class="people-slider__element__name">Elisabeth</h3>
+                    </li>
+                    <li class="people-slider__element">
+                        <picture class="people-slider__element__img">
+                            <!-- Webp -->
+                            <source srcset="./img/content/client-1.webp 1x, ./img/content/client-1@2x.webp 2x" type="image/webp">
+                            <!-- Png -->
+                            <source srcset="./img/content/client-1.png 1x, ./img/content/client-1@2x.png 2x" type="image/png">
+                            <img src="./img/content/client-1.png" alt="client">
+                        </picture>
+                        <ul class="people-slider__element__stars">
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <h3 class="people-slider__element__name">John</h3>
+                    </li>
+                    <li class="people-slider__element">
+                        <picture class="people-slider__element__img">
+                            <!-- Webp -->
+                            <source srcset="./img/content/client-2.webp 1x, ./img/content/client-2@2x.webp 2x" type="image/webp">
+                            <!-- Png -->
+                            <source srcset="./img/content/client-2.png 1x, ./img/content/client-2@2x.png 2x" type="image/png">
+                            <img src="./img/content/client-2.png" alt="client">
+                        </picture>
+                        <ul class="people-slider__element__stars">
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <h3 class="people-slider__element__name">Will</h3>
+                    </li>
+                    <li class="people-slider__element">
+                        <picture class="people-slider__element__img">
+                            <!-- Webp -->
+                            <source srcset="./img/content/client-3.webp 1x, ./img/content/client-3@2x.webp 2x" type="image/webp">
+                            <!-- Png -->
+                            <source srcset="./img/content/client-3.png 1x, ./img/content/client-3@2x.png 2x" type="image/png">
+                            <img src="./img/content/client-3.png" alt="client">
+                        </picture>
+                        <ul class="people-slider__element__stars">
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                            <li class="people-slider__element__star star--filled">
+                                <svg class="people-slider__element__star__icon">
+                                    <use href="./img/icons.svg#icon-star"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                        <h3 class="people-slider__element__name">Elisabeth</h3>
+                    </li>
+                </ul>
+                <ul class="reviews-container">
+                    <li class="reviews-container__element selected">
+                        1 Last time I have visited a cooking course by Eva 
+                        I was impressed with the way she explained everything
+                        to people. You can be sure you will manage to cook a delicious dish even if it is your first time in the kitchen!<br>
+                        Thank you so much for the masterclass! Looking forward to the next one and highly recommend it to everyone!
+                    </li>
+                    <li class="reviews-container__element">
+                        2 Last time I have visited a cooking course by Eva 
+                        I was impressed with the way she explained everything
+                        to people. You can be sure you will manage to cook a delicious dish even if it is your first time in the kitchen!<br>
+                        Thank you so much for the masterclass! Looking forward to the next one and highly recommend it to everyone!
+                    </li>
+                    <li class="reviews-container__element">
+                        3 Last time I have visited a cooking course by Eva 
+                        I was impressed with the way she explained everything
+                        to people. You can be sure you will manage to cook a delicious dish even if it is your first time in the kitchen!<br>
+                        Thank you so much for the masterclass! Looking forward to the next one and highly recommend it to everyone!
+                    </li>
+                    <li class="reviews-container__element">
+                        4 Last time I have visited a cooking course by Eva 
+                        I was impressed with the way she explained everything
+                        to people. You can be sure you will manage to cook a delicious dish even if it is your first time in the kitchen!<br>
+                        Thank you so much for the masterclass! Looking forward to the next one and highly recommend it to everyone!
+                    </li>
+                    <li class="reviews-container__element">
+                        5 Last time I have visited a cooking course by Eva 
+                        I was impressed with the way she explained everything
+                        to people. You can be sure you will manage to cook a delicious dish even if it is your first time in the kitchen!<br>
+                        Thank you so much for the masterclass! Looking forward to the next one and highly recommend it to everyone!
+                    </li>
+                    <li class="reviews-container__element">
+                        6 Last time I have visited a cooking course by Eva 
+                        I was impressed with the way she explained everything
+                        to people. You can be sure you will manage to cook a delicious dish even if it is your first time in the kitchen!<br>
+                        Thank you so much for the masterclass! Looking forward to the next one and highly recommend it to everyone!
+                    </li>
+                </ul>
+                <div class="slider-counter">
+                    <button class="slider-counter__button" data-slider-prev>
+                        <svg class="slider-counter__button__icon">
+                            <use href="./img/icons.svg#icon-arrow"></use>
+                        </svg>
+                    </button>
+                    <p class="slider-counter__number"></p>
+                    <button class="slider-counter__button" data-slider-next>
+                        <svg class="slider-counter__button__icon">
+                            <use href="./img/icons.svg#icon-arrow"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Registration Section -->
+        <section class="section registration" id="registration">
+            <div class="container">
+                <h2 class="section__title registration__title">Registration</h2>
+                <div class="registration__content">
+                    <h2 class="section__title registration__content__title">Registration</h2>
+                    <div class="registration__content__info">
+                        <time class="registration__content__info__date" datetime="05-23 11:00">May 23, 11:00</time>
+                        <p class="registration__content__info__place">New York</p>
+                        <p class="registration__content__info__price">$ 699</p>
+                    </div>
+                    <form name="register_form" class="form registration__content__form">
+                        <div class="registration__inputs__container">
+                            <p class="form__title registration__content__form__title">Apply your personal info for registration</p>
+                            <input name="register_name" class="form__input registration__content__form__input" type="text" placeholder="Your name">
+                            <input name="register_phone" class="form__input registration__content__form__input" type="tel" placeholder="Phone number">
+                            <input name="register_email" class="form__input registration__content__form__input" type="email" placeholder="Email">
+                        </div>
+                        <button class="button" type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="section footer" id="contacts">
+        <div class="container footer__container">
+            <h2 class="section__title footer__title">Contact</h2>
+            <form name="footer_form" class="form footer__form">
+                <p class="form__title footer__form__title">We will answer any question!</p>
+                <input class="form__input footer__form__input" name="footer_email" type="email" placeholder="Email">
+                <input class="form__input footer__form__input" name="footer_question" type="text" placeholder="Type your question">
+                <button class="button" type="submit">Send</button>
+            </form>
+            <ul class="footer__icons__list">
+                <li class="footer__icons__list__element">
+                    <a href="/" class="footer__icons__list__link">
+                        <svg class="footer__icons__list__icon">
+                            <use href="./img/icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__icons__list__element">
+                    <a href="/" class="footer__icons__list__link">
+                        <svg class="footer__icons__list__icon">
+                            <use href="./img/icons.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="footer__icons__list__element">
+                    <a href="/" class="footer__icons__list__link">
+                        <svg class="footer__icons__list__icon">
+                            <use href="./img/icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <address class="footer__address">
+                <a class="footer__address__link" href="tel:(910)222-8855">
+                    <svg class="footer__address__link__icon">
+                        <use href="./img/icons.svg#icon-phone"></use>
+                    </svg>
+                    (910)222-8855
+                </a>
+                <a class="footer__address__link" href="tel:(910)222-8855">
+                    <svg class="footer__address__link__icon">
+                        <use href="./img/icons.svg#icon-mark"></use>
+                    </svg>
+                    New York
+                </a>
+            </address>
+        </div>
+    </footer>
 </body>
 </html>
