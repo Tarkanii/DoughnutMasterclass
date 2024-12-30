@@ -1,5 +1,6 @@
 const formsHandler = () => {
     registerFormHandler();
+    footerFormHandler();
 }
 
 function registerFormHandler() {
@@ -15,6 +16,20 @@ function registerFormHandler() {
         nameInput.value = '';
         phoneInput.value = '';
         emailInput.value = '';
+    })
+}
+
+function footerFormHandler() {
+    const footerForm = document.querySelector('[name=footer_form]');
+    const emailInput = footerForm.querySelector('[name=footer_email]');
+    const questionInput = footerForm.querySelector('[name=footer_question]');
+
+    footerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log(`email: ${emailInput.value}, question: ${questionInput.value}`);
+        
+        emailInput.value = '';
+        questionInput.value = '';
     })
 }
 
