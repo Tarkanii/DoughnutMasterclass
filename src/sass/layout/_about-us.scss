@@ -94,6 +94,7 @@
     }
 
     &__hidden-text {
+        font-size: 16px;
         height: 0;
         opacity: 0;
         visibility: hidden;
@@ -109,6 +110,7 @@
         }
 
         @include desktop {
+            font-size: 18px;
             height: auto;
             opacity: 1;
             margin-bottom: 0;
