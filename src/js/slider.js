@@ -24,8 +24,8 @@ const sliderHandler = () => {
 
 function sliderFunctionalityHandler(slider) {
     let isGrabbing = false;
-    let currentX = 0;
-    let startX = 0;
+    let currentX = null;
+    let startX = null;
 
     // Prevent dragging picture
     slider.querySelectorAll("img").forEach((element) => element.addEventListener("dragstart", (e) => e.preventDefault()));
@@ -56,6 +56,7 @@ function sliderFunctionalityHandler(slider) {
         if (!isGrabbing) return;
         isGrabbing = false;
         slider.classList.remove("grabbing");
+        if(currentX === null || startX === null) return;
 
         if (currentX - startX < 0 && Math.abs(currentX - startX) > 100 && state.currentSlide + 1 < state.slidesAmount) {
             scrollToSlide(state.currentSlide + 1, slider);
@@ -64,6 +65,9 @@ function sliderFunctionalityHandler(slider) {
         if (currentX - startX > 0 && Math.abs(currentX - startX) > 100 && state.currentSlide - 1 >= 0) {
             scrollToSlide(state.currentSlide - 1, slider);
         }
+
+        currentX = null,
+        startX = null;
     }
 
     function getX (e) {
@@ -78,7 +82,10 @@ function setSelectedSlide(index) {
     document.querySelectorAll('.reviews-container__element.selected').forEach((element) => element.classList.remove('selected'));
 
     document.querySelector(`[data-people-index='${index}'`).classList.add('selected');
-    setTimeout(() => document.querySelector(`[data-review-index='${index}'`).classList.add('selected'), 100);
+    setTimeout(() => {
+        document.querySelectorAll('.reviews-container__element.selected').forEach((element) => element.classList.remove('selected'));
+        document.querySelector(`[data-review-index='${index}'`).classList.add('selected');
+    }, 250);
 
     document.querySelector('.slider-counter__number').innerHTML = `${index + 1}/${state.slidesAmount}`;
 }
@@ -87,7 +94,7 @@ function scrollToSlide(index, slider) {
     if (index < 0 || index >= state.slidesAmount) return;
 
     setSelectedSlide(index);
-    slider.querySelector(`[data-people-index = '${index}']`).scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    slider.querySelector(`[data-people-index = '${index}']`).scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
 }
 
 
